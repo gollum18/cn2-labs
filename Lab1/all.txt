@@ -1,0 +1,23 @@
+total 84
+drwxrwxrwt 19 root     root     4096 Jan 24 16:32 .
+drwxr-xr-x 24 root     root     4096 Jan 19 12:25 ..
+-rw-------  1 christen christen    0 Jan 24 16:21 config-err-RsWBSt
+-r--r--r--  1 christen christen   26 Jan 24 16:32 c.txt
+drwxrwxrwt  2 root     root     4096 Jan 24 16:21 .font-unix
+drwxrwxrwt  2 root     root     4096 Jan 24 16:21 .ICE-unix
+drwx------  2 christen christen 4096 Jan 24 16:21 ssh-f75FdUyVbfSs
+drwx------  3 root     root     4096 Jan 24 16:22 systemd-private-0bffdf0454d942d79fac600fa52337dd-bolt.service-qTz5Lf
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-colord.service-KEL3Ap
+drwx------  3 root     root     4096 Jan 24 16:22 systemd-private-0bffdf0454d942d79fac600fa52337dd-fwupd.service-2uwL6t
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-ModemManager.service-wVqYAn
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-rtkit-daemon.service-GMDQab
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-systemd-resolved.service-2fIT9F
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-systemd-timesyncd.service-sSe1xw
+drwx------  3 root     root     4096 Jan 24 16:21 systemd-private-0bffdf0454d942d79fac600fa52337dd-upower.service-kQzJIc
+drwx------  2 christen christen 4096 Jan 24 16:21 Temp-b164c3cd-bd5e-4c34-836c-88c8f92634ea
+drwx------  2 christen christen 4096 Jan 24 16:21 Temp-bd44aa60-f419-4f61-acd7-367cf54c24d5
+drwxrwxrwt  2 root     root     4096 Jan 24 16:21 .Test-unix
+drwxrwxr-x  3 christen christen 4096 Jan 24 16:26 ukuu
+-r--r--r--  1 gdm      gdm        11 Jan 24 16:21 .X1024-lock
+drwxrwxrwt  2 root     root     4096 Jan 24 16:21 .X11-unix
+drwxrwxrwt  2 root     root     4096 Jan 24 16:21 .XIM-unix

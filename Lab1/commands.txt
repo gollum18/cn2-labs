@@ -1,0 +1,12 @@
+This is the list of commands I used for this lab.
+
+cd ~/
+mkdir homework1
+cd homework1
+vim a.txt
+vim b.txt
+cp a.txt c.txt
+cat b.txt >> c.txt
+cp c.txt /tmp
+chmod u-w /tmp/c.txt
+ls -al /tmp > all.txt
