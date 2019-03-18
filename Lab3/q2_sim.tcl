@@ -1,10 +1,14 @@
+# get the number of nodes
 set n [lindex $argv 0]
+
+# create the output directory
+file mkdir q2/$n
 
 # create the simulator
 variable ns [new Simulator]
 
 # enable tracing
-variable nf [open q2_$n.nam w]
+variable nf [open q2/$n/q2_$n.nam w]
 $ns namtrace-all $nf
 
 # create the gateway nodes
@@ -31,6 +35,15 @@ for {set i 0} {$i < $n} {incr i} {
     $ns queue-limit [lindex $b $i] $q 10
 }
 
+# enable tracing on each link
+variable tr {}
+for {set i 0} {$i < $n} {incr i} {
+    set tr_name "q2/$n/q2_q_b"
+    append tr_name $i ".tr"
+    lappend tr [open $tr_name w]
+    $ns trace-queue [lindex $b $i] $q [lindex $tr $i]
+}
+
 # create the tcp agents/sinks
 variable tcp {}
 variable sink {}
@@ -52,7 +65,6 @@ for {set i 0} {$i < $n} {incr i} {
 variable traf {}
 for {set i 0} {$i < $n} {incr i} {
     lappend traf [new Application/Traffic/Exponential]
-    # TODO: Maybe randomize the traffic patterns?
     # attach the traffic source to the tcp agent
     [lindex $traf $i] attach-agent [lindex $tcp $i]
 }
@@ -65,6 +77,9 @@ for {set i 0} {$i < $n} {incr i} {
 
 # schedule the finish 'proc'
 $ns at 20 "$ns flush-trace"
+for {set i 0} {$i < $n} {incr i} {
+    $ns at 20 "close [lindex $tr $i]"
+}
 $ns at 20 "close $nf"
 $ns at 20 "exit 0"
 
