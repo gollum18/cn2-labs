@@ -26,7 +26,7 @@ $ns duplex-link $a1 $p 100Kb 15ms DropTail
 $ns duplex-link $p $q 100Kb 15ms DropTail
 $ns duplex-link $q $b1 100Kb 15ms DropTail
 
-# get the delay components of the links
+# get a reference to the links
 set send_link [$ns link $a1 $p]
 set carrier_link [$ns link $p $q]
 set reply_link [$ns link $q $b1]
@@ -78,7 +78,7 @@ for {set i 1} {$i < 11} {incr i} {
     # send_link, carrier_link, reply_link
     $ns at [expr $i * 1.5 + $i * 0.25] "$send_link set delay_ [expr $i * 2]ms"
     $ns at [expr $i * 1.5 + $i * 0.25] "$carrier_link set delay_ [expr $i * 2]ms"
-    $ns at  [expr $i * 1.5 + $i * 0.25] "$reply_link set delay_ [expr $i * 2]ms"
+    $ns at [expr $i * 1.5 + $i * 0.25] "$reply_link set delay_ [expr $i * 2]ms"
 }
 
 # call finish after 20 seconds of sim time
